@@ -1,7 +1,7 @@
-[![Build Status](https://travis-ci.org/JuergenWeichand/java-mapfile.svg?branch=master)](https://travis-ci.org/JuergenWeichand/java-mapfile)
-
 # Java Mapfile
 Reading and writing UMN MapSever XML-Mapfiles with Java
+
+[![Build Status](https://travis-ci.org/JuergenWeichand/java-mapfile.svg?branch=master)](https://travis-ci.org/JuergenWeichand/java-mapfile)
 
 ## Building from source
 
