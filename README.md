@@ -49,4 +49,4 @@ Reading and writing UMN MapServer XML-Mapfiles with Java
 ## Read Map instance from file
 
     final File mapFile = new File("/tmp/javamapfile.xml");
-    MapfileIO.readMapFromFile(mapFile);
+    Map map = MapfileIO.readMapFromFile(mapFile);
