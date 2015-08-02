@@ -26,4 +26,37 @@ public class MapFactory
         return rgbColorType;
     }
     
+    public static OutputFormat buildOutputFormat(Format format) 
+    {
+        if (format.equals(Format.AGG_JPEG)) 
+        {
+            OutputFormat outputFormat = new OutputFormat();
+            outputFormat.setName("jpeg");
+            outputFormat.setDriver("AGG/JPEG");
+            outputFormat.setMimeType("image/jpeg");
+            outputFormat.setImageMode("RGB");
+            outputFormat.setExtension("jpeg"); 
+            return outputFormat;
+        }
+        if (format.equals(Format.AGG_PNG)) 
+        {
+            OutputFormat outputFormat = new OutputFormat();
+            outputFormat.setName("png");
+            outputFormat.setDriver("AGG/PNG");
+            outputFormat.setMimeType("image/png");
+            outputFormat.setImageMode("RGB");
+            outputFormat.setExtension("png");            
+            return outputFormat;
+        }
+        return null;
+    }
+    
+    
+    
+    public enum Format
+    {
+        AGG_PNG,
+        AGG_JPEG
+    }
+    
 }

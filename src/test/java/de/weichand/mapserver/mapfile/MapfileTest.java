@@ -9,6 +9,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static de.weichand.mapserver.mapfile.MapFactory.buildItem;
 import static de.weichand.mapserver.mapfile.MapFactory.buildRgbColorType;
+import static de.weichand.mapserver.mapfile.MapFactory.buildOutputFormat;
 import javax.xml.transform.TransformerException;
         
 /**
@@ -41,13 +42,17 @@ public class MapfileTest {
     {
         Map map = new Map();
         map.setName("OGC:WMS");
+        map.setVersion("7.0.0");
         map.getProjection().add("init=epsg:31468");
         map.getExtent().add(4264375d);
         map.getExtent().add(5216375d);
         map.getExtent().add(4670625d);
         map.getExtent().add(5622625d);
         
-        
+        // OutputFormats
+        map.getOutputFormat().add(buildOutputFormat(MapFactory.Format.AGG_PNG));
+        map.getOutputFormat().add(buildOutputFormat(MapFactory.Format.AGG_JPEG));
+              
         // Web
         Web web = new Web();
         ItemType webMetadata = new ItemType();
