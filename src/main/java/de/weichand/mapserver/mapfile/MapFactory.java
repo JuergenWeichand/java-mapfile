@@ -17,4 +17,13 @@ public class MapFactory
         return item;
     }
     
+    public static RgbColorType buildRgbColorType(int red, int green, int blue) 
+    {
+        final RgbColorType rgbColorType = new RgbColorType();
+        rgbColorType.setRed(red);
+        rgbColorType.setGreen(green);
+        rgbColorType.setBlue(blue);
+        return rgbColorType;
+    }
+    
 }
